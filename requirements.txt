@@ -1,0 +1,7 @@
+langchain
+langchain-openai
+fastapi
+langserve[server]
+pydantic
+openai
+langchainhub
