@@ -1,2 +1,2 @@
 # CustomAgents
-Create custom tools and agents in langchain and deploy the Agent as an API
+Create custom tools and agents in langchain and deploy the Agent as an API using FASTAPI and Langserve
