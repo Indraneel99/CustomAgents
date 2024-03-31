@@ -16,19 +16,10 @@ from fastapi import FastAPI
 from langserve import add_routes
 
 
-with open("C:/Users/Renangi Ajay Kumar/Indra_api_keys/langchain.txt") as file:
-    langchain_key = str(file.read())
-    
-with open("C:/Users/Renangi Ajay Kumar/Indra_api_keys/OPENAI.txt") as file:
-    openai_key = str(file.read())
-
-with open("C:/Users/Renangi Ajay Kumar/Indra_api_keys/tavily.txt") as file:
-    tavily_key = str(file.read())
-
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_API_KEY"] = langchain_key
-os.environ["OPENAI_API_KEY"] = openai_key
-os.environ["TAVILY_API_KEY"] = tavily_key
+os.environ["LANGCHAIN_API_KEY"] = os.environ.get("langchain")
+os.environ["OPENAI_API_KEY"] = os.environ.get("OPENAI_API_KEY")
+os.environ["TAVILY_API_KEY"] = os.environ.get("tavily")
 
 prompt = hub.pull("hwchase17/openai-tools-agent")
 
