@@ -5,3 +5,4 @@ langserve[server]
 pydantic
 openai
 langchainhub
+streamlit
